@@ -37,6 +37,12 @@ dependencies {
 	// Lombok
 	compileOnly 'org.projectlombok:lombok:1.18.20'
 	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+	// XMLConfiguration
+	implementation group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+
+	// 提供常用的集合類，例如：List、Map、Set 等
+	implementation group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
 }
 
 tasks.named('test') {
