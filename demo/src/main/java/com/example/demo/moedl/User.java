@@ -7,12 +7,12 @@ import javax.persistence.Column;
 @Data
 public class User {
 
-	@Column(name = "id")
+	@Column(name = "account")
 	@Schema(description = "編號")
-	Integer id;
+	String account;
 
-	@Column(name = "count")
+	@Column(name = "password")
 	@Schema(description = "帳號")
-	String count;
+	String password;
 
 }
