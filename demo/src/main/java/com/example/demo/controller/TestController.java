@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.moedl.User;
+import com.example.demo.moedl.Users;
 import com.example.demo.service.TestService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -23,10 +23,10 @@ public class TestController {
     private TestService service;
 
     @Operation(summary = "測試取得資料庫的 User Table", responses = {
-            @ApiResponse(responseCode = "200", content = @Content(array = @ArraySchema(schema = @Schema(implementation = User.class)))),
+            @ApiResponse(responseCode = "200", content = @Content(array = @ArraySchema(schema = @Schema(implementation = Users.class)))),
             @ApiResponse(responseCode = "503", content = @Content(schema = @Schema(implementation = Output.class))) }, security = @SecurityRequirement(name = "Authorization"))
     @GetMapping("/getUserList")
-    public List<User> getUserList() {
+    public List<Users> getUserList() {
         return service.getUserList();
     }
 

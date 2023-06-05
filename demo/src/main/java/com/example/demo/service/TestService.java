@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.dao.TestDao;
-import com.example.demo.moedl.User;
+import com.example.demo.moedl.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -17,7 +17,7 @@ public class TestService {
      * @param 無
      * @return List<User> User 清單
      * */
-    public List<User> getUserList() {
+    public List<Users> getUserList() {
         return testDao.getUserList();
     }
 

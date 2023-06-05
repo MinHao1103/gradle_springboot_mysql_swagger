@@ -1,6 +1,6 @@
 package com.example.demo.dao;
 
-import com.example.demo.moedl.User;
+import com.example.demo.moedl.Users;
 import com.example.demo.util.SQLReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,9 +25,9 @@ public class TestDao {
      * @param 無
      * @return List<User> User 清單
      * */
-    public List<User> getUserList() {
+    public List<Users> getUserList() {
         String sql = reader.getString("getUserList");
-        return namedParameterJdbcTemplate.query(sql , new BeanPropertyRowMapper<>(User.class));
+        return namedParameterJdbcTemplate.query(sql , new BeanPropertyRowMapper<>(Users.class));
     }
 
 }
