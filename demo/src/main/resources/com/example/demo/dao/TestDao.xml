@@ -2,7 +2,7 @@
 <SQL>
     <getUserList>
         <![CDATA[
-			SELECT * FROM user
+			SELECT * FROM users
 		]]>
     </getUserList>
 </SQL>
